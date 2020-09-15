@@ -125,7 +125,7 @@ const best = (
 );
 ```
 
-- The HTML code must be wrapped in ONE top level element.(Mostly `<div>...</div>`tag.)
+- The HTML code must be wrapped in **ONE** top level element.(Mostly `<div>...</div>`tag.)
 - JSX follows XML rules, and therefore HTML elements must be properly closed.(`<img src="..." />`)
 
 ### Part 5 - Comments in JSX
