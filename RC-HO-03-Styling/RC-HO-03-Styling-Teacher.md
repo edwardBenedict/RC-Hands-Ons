@@ -226,3 +226,50 @@ export default App;
 - With `styled-components` you can write plain CSS in React components without having to worry about clashing of class names.
 
 - Firstly, you should install `styled-components` with `npm install styled-components --save` and `import styled from 'styled-components';` to components.
+
+Syntax :
+
+```js
+import styled from "styled-components";
+
+const FirstSC = styled.div`
+  font-size: 32px;
+  background-color: black;
+  /* kebab-case like CSS file */
+`;
+
+<FirstSC> Styling React Components </FirstSC>;
+```
+
+> Example :
+
+```js
+import React from "react";
+import styled from "styled-components";
+
+class App extends React.Component {
+  render() {
+    const Button = styled.button`
+      background: ${(props) => (props.styled ? "wheat" : "turquoise ")};
+      color: ${(props) => (props.styled ? "grey" : "black")};
+
+      font-size: 2em;
+      margin: 2em;
+      padding: 0.5em 2em;
+      border: 2px solid purple;
+      border-radius: 10px;
+      &:hover {
+        background-color: white;
+      }
+    `;
+    return (
+      <div>
+        <Button>Normal</Button>
+        <Button styled>Styled</Button>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
