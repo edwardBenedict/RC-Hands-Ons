@@ -218,3 +218,11 @@ function App() {
 
 export default App;
 ```
+
+### Part 6 `styled components`
+
+- We can also styled our components with `styled components`. It is a library for React and React Native that allows you to use component-level styles in your application that are written with a mixture of JavaScript and CSS.
+
+- With `styled-components` you can write plain CSS in React components without having to worry about clashing of class names.
+
+- Firstly, you should install `styled-components` with `npm install styled-components --save` and `import styled from 'styled-components';` to components.
