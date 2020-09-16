@@ -163,3 +163,58 @@ const App = () => (
 
 export default App;
 ```
+
+### Part 5 - SASS
+
+---
+
+- You have already know very well SASS. It’s a CSS preprocessor, which adds special features such as variables, nested rules and mixins into regular CSS. Sass allows the use of variables, nesting, partials, imports and functions, which add super powers to regular CSS.
+
+> Example :
+
+```scss
+/* style.scss */
+$primary-color: #636e72;
+$secondary-color: #273c75;
+$font-stack: "Open Sans", sans-serif;
+$primary-background-color: #f5deb3;
+$secondary-background-color: #dcdde1;
+
+.body {
+  font: $font-stack;
+  color: $primary-color;
+  background-color: $primary-background-color;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-size: 32px;
+  color: $secondary-color;
+  background-color: $secondary-background-color;
+  padding: 30px;
+
+  &:hover {
+    background-color: $primary-background-color;
+    color: $primary-color;
+  }
+}
+```
+
+```js
+// App.js
+import React from "react";
+import "./sass/style.css";
+
+function App() {
+  return (
+    <div className="body">
+      <h1 className="heading">Styling with SASS</h1>
+    </div>
+  );
+}
+
+export default App;
+```
