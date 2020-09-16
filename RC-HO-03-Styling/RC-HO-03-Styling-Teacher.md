@@ -13,13 +13,11 @@
 
 - Part 3 - CSS Stylesheet
 
-- Part 4 - Rendering a ReactJS Component
+- Part 4 - CSS Modules
 
-- Part 5 - Component `constructor()`
+- Part 5 - SASS
 
-- Part 6 - Transfer Data with `props` in Components
-
-- Part 7 - Usage of Components
+- Part 6 - Styled Components
 
 ### Part 1 - What is Component?
 
@@ -72,7 +70,7 @@ export default class Button extends React.Component {
 
 - &#10071; Do not forget to use double braces (`{{}}`).
 
-### Part 3 - CSS Style
+### Part 3 - CSS Stylesheet
 
 ---
 
@@ -117,4 +115,51 @@ export default function App({ items, onClick }) {
     </ul>
   );
 }
+```
+
+### Part 4 - CSS Modules
+
+---
+
+- Also you use use CSS Modules for adding styles to your application. A CSS Module is a CSS file in which all class names and animation names are scoped locally- by default.
+
+Syntax :
+
+```js
+import styles from "./style.module.css";
+<div className={styles.property}>CSS Modules</div>;
+```
+
+> Example :
+
+```css
+/* style.module.css */
+.outerDiv {
+  border-color: #00b894;
+  border: 10px solid #ff7675;
+  border-radius: 10px;
+  width: 50%;
+  margin: 25%;
+}
+.innerDiv {
+  padding: 15px;
+  background-color: #636e72;
+  color: wheat;
+  text-align: center;
+  font-size: 3rem;
+}
+```
+
+```js
+// App.js
+import React from "react";
+import styles from "./style.module.css";
+
+const App = () => (
+  <div className={styles.outerDiv}>
+    <div className={styles.innerDiv}>CSS Modules</div>
+  </div>
+);
+
+export default App;
 ```
