@@ -129,7 +129,7 @@ Syntax :
 
 ```js
 <NameOfComponent nameOfProp="value" />;
-// And you can use value in another component
+// And you can use value in another component.
 <div>.... {this.props.nameOfProp}</div>;
 ```
 
