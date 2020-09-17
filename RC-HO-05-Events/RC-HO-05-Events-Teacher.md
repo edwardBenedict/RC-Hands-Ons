@@ -55,6 +55,75 @@ export default class App extends Component {
 }
 ```
 
-### PArt 2 - Bind `this`
+### Part 2 - Bind `this`
 
 ---
+
+The `this` keyword represents the component that owns the method.
+
+Syntax :
+
+```js
+<button nameOfEvent={this.nameOfFunction}>Click</button>
+```
+
+> Example:
+
+```js
+import React from "react";
+
+export default class App extends React.Component {
+  clarusway = () => {
+    alert("Welcome to the place of the bests!");
+  };
+  render() {
+    return <button onClick={this.clarusway}>Clarusway!</button>;
+  }
+}
+```
+
+### Part 3 - Passing Arguments to Event
+
+---
+
+- You will need to pass arguments to function in your React Projects. You can send two ways:
+
+1. Anonymous arrow functions
+
+Syntax:
+
+```js
+nameOfFunction = () => {
+  {/* statement */}
+}
+...
+<button nameOfEvent={() => this.nameOfFunction("value")}>Button</button>
+```
+
+> Example :
+
+```js
+import React from "react";
+import "./App.css";
+
+class App extends React.Component {
+  clarusway = (a) => {
+    alert(a + ": Welcome to the place of the bests!");
+  };
+  render() {
+    return <button onClick={() => this.clarusway("Edward")}>Clarusway!</button>;
+  }
+}
+
+export default App;
+```
+
+2. Bind event with `this`
+
+---
+
+- Keep in mind that firs argument has to be `this`
+
+```js
+
+```
