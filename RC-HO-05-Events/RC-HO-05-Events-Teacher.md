@@ -1,7 +1,7 @@
 <p >Clarusway<img align="right"
   src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-# Hands-on Events in ReactJS
+# Hands-On Events in ReactJS
 
 > Purpose of the this hands-on training is to teach the students Events.
 
@@ -9,15 +9,9 @@
 
 - Part 1 - What is Event?
 
-- Part 2 - `constructor()` Method
+- Part 2 - Bind `this`
 
-- Part 3 - `render()` Method
-
-- Part 4 - `componentDidMount()` method
-
-- Part 5 - `componentDidUpdate()` Method
-
-- Part 6 - `componentWillUnmount()` Method
+- Part 3 - Passing Arguments to Event
 
 ### Part 1 - What is Event?
 
@@ -29,8 +23,11 @@ Syntax :
 
 ```js
 // In HTML => lowercase and paranteses end of the function name
+
 <button nameofevent="nameOfFunction()">Clarusway</button>
+
 // In React => camelCase and NO paranteses end of the function name
+
 <button nameOfEvent={nameOfFunction}>Clarusway</button>
 ```
 
@@ -152,4 +149,4 @@ export default App;
 
 ---
 
-- &#10071; We used `<button>` tag in this hands-on, but you can use others which you want.
+- &#9889; We used `<button>` tag in this hands-on, but you can use others which you want.
