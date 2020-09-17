@@ -9,27 +9,27 @@
 
 - Part 1 - What is Lifecycle?
 
-- Part 2 - Class Component
+- Part 2 - `constructor()` Method
 
-- Part 3 - Function Component
+- Part 3 - `render()` Method
 
-- Part 4 - Rendering a ReactJS Component
+- Part 4 - `componentDidMount()` method
 
-- Part 5 - Component `constructor()`
+- Part 5 - `componentDidUpdate()` Method
 
-- Part 6 - Transfer Data with `props` in Components
+- Part 6 - `componentWillUnmount()` Method
 
-- Part 7 - Usage of Components
-
-### Part 1 - What is Component?
+### Part 1 - What is Lifecycle?
 
 ---
 
-- You can think of lifecycle methods as the series of events that happen from the birth of a component to its death. Like every living being, components go through a cycle of birth, growth, and death.
+- You can think of lifecycle methods as the series of events that happen from the birth of a component to its death. Like every living being, **components** go through a cycle of birth, growth, and death.
 
-> Mount -> Birth  
-> Update -> Growth  
-> Unmount -> Death
+- We can consider like this way:
+
+  > Mount -> Birth  
+  > Update -> Growth  
+  > Unmount -> Death
 
 - We will learn most used React Lifecycle Methods:
 
@@ -94,7 +94,7 @@ Syntax :
 ```js
 class RenderComponent extends Component {
   render() {
-    return <div>{/* Statement */}</div>;
+    return <nameOfTag>{/* Statement */}</nameOfTag>;
   }
 }
 ```
@@ -124,16 +124,13 @@ class App extends Component {
   }
 }
 export default App;
-```
-
-- When you run this code blocks, you will in the browser console:
-
-```
+/* Expected output in the browser console:
 Constructor Method run here!
 Render Method run here!
+*/
 ```
 
-### Part 4 `componentDidMount()` method
+### Part 4 - `componentDidMount()` method
 
 ---
 
@@ -184,16 +181,13 @@ class App extends Component {
 }
 
 export default App;
-```
-
-- When you run this code blocks, you will in the browser console:
-
-```
+/* Expected output in the browser console:
 Constructor Method run here!
 Render Method run here!
 componentDidMount Method run here!
 Data fetched.
 Render Method run here!
+*/
 ```
 
 - The `render()` method will run every time after `componentDidMount()` method.
