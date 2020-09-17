@@ -46,7 +46,7 @@
 
 ---
 
-- You can see `render()` method every class component.
+- You will use `render()` method every class component. When the component file is called it calls the `render()` method by default because that component needs to display the HTML markup or we can say JSX syntax.
 
 Syntax :
 
