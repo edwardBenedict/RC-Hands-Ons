@@ -205,3 +205,130 @@ Render Method run here!
 - `componentDidUpdate()` is called as soon as the updating happens. The `componentDidUpdate()` is usually used when update the DOM in response to prop or state changes.
 
 - You can call `setState()` in this lidecycle but if you do not use `componentDidUpdate()` correctly, it can lead to an infinite loop.
+
+Syntax :
+
+```js
+componentDidUpdate(prevProps, prevState) {
+  {/* Statement */}
+}
+```
+
+> Example :
+
+```js
+import React, { Component } from "react";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "Ed Benedict",
+    };
+    console.log("Constructor Method run here!");
+  }
+
+  getName() {
+    setTimeout(() => {
+      console.log("Data fetched");
+      this.setState({
+        name: "Walter White",
+      });
+    }, 1000);
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount Method run here!");
+    this.getName();
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log("componentDidUpdate Method run here!");
+  }
+
+  render() {
+    console.log("Render Method run here!");
+    return <div>{this.state.name}</div>;
+  }
+}
+
+export default App;
+/* Expected output in the browser console:
+constructor Method run here!
+render Method run here!
+componentDidMount Method run here!
+Data fetched.
+render Method run here!
+componentDidUpdate Method run here!
+*/
+```
+
+### Part 6 - `componentWillUnmount()` Method
+
+---
+
+- `componentWillUnmount()` method is called just before the component is unmounted and destroyed. If there are any cleanup actions that you would need to do, this would be the right way.
+- &#10071; You can not use `componentWillUnmount()` for changing the component state.
+- You should not call setState() in componentWillUnmount() because the component will never be re-rendered. Once a component instance is unmounted, it will never be mounted again.
+
+Syntax :
+
+```js
+componentWillUnmount() {
+ {/* Statement */}
+}
+``
+
+> Example:
+
+```
+
+```js
+import React, { Component } from "react";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "Ed Benedict",
+    };
+    console.log("Constructor Method run here!");
+  }
+  componentWillMount() {
+    console.log("componentWillMount Method run here!");
+  }
+
+  getName() {
+    setTimeout(() => {
+      console.log("Data fetched");
+      this.setState({
+        name: "Walter White",
+      });
+    }, 1000);
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount Method run here!");
+    this.getName();
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log("componentDidUpdate Method run here!");
+  }
+
+  render() {
+    console.log("Render Method run here!");
+    return <div>{this.state.name}</div>;
+  }
+}
+
+export default App;
+
+/* /* Expected output in the browser console:
+constructor Method run here!
+componentWillMount Method run here!
+render Method run here!
+componentDidMount Method run here!
+Data fetched.
+render Method run here!
+componentDidUpdate Method run here!
+*/
+```
