@@ -58,6 +58,7 @@ Constructor(props){
 > Example:
 
 ```js
+// App.js
 import React, { Component } from "react";
 
 class App extends Component {
@@ -101,5 +102,106 @@ class RenderComponent extends Component {
 > Example
 
 ```js
+// App.js
+import React, { Component } from "react";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      course: "Clarusway",
+    };
+    console.log("Constructor Method run here!");
+  }
+
+  render() {
+    console.log("Render Method run here!");
+    return (
+      <div className="App">
+        <h2>React Constructor Example</h2>
+      </div>
+    );
+  }
+}
+export default App;
+```
+
+- When you run this code blocks, you will in the browser console:
 
 ```
+Constructor Method run here!
+Render Method run here!
+```
+
+### Part 4 `componentDidMount()` method
+
+---
+
+- As understood from the name, after all the elements of the page is rendered correctly, this method is called.
+
+- This method is also used for integration with other JavaScript frameworks and any functions with delayed execution such as `setTimeout` or `setInterval`. You can use it to update the state so we can trigger the other lifecycle methods.
+
+Syntax :
+
+```js
+componentDidMount() {
+    {/* Statement */}
+      }
+```
+
+> Example :
+
+```js
+import React, { Component } from "react";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "Ed Benedict",
+    };
+    console.log("Constructor Method run here!");
+  }
+
+  getName() {
+    setTimeout(() => {
+      console.log("Data fetched.");
+      this.setState({
+        name: "Walter White",
+      });
+    }, 1000);
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount Method run here!");
+    this.getName();
+  }
+
+  render() {
+    console.log("Render Method run here!");
+    return <div>{this.state.name}</div>;
+  }
+}
+
+export default App;
+```
+
+- When you run this code blocks, you will in the browser console:
+
+```
+Constructor Method run here!
+Render Method run here!
+componentDidMount Method run here!
+Data fetched.
+Render Method run here!
+```
+
+- The `render()` method will run every time after `componentDidMount()` method.
+
+### Part 5 - `componentDidUpdate()` Method
+
+---
+
+- `componentDidUpdate()` is called as soon as the updating happens. The `componentDidUpdate()` is usually used when update the DOM in response to prop or state changes.
+
+- You can call `setState()` in this lidecycle but if you do not use `componentDidUpdate()` correctly, it can lead to an infinite loop.
