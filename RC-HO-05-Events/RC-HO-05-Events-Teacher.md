@@ -149,3 +149,7 @@ export default App;
 ```
 
 - &#10071; If you send arguments without using the `bind` method, `(this.clarusway(this, "Walter")` instead of `this.clarusway.bind(this, "Walter"))`, the shoot function will be executed when the page is loaded instead of waiting for the button to be clicked.
+
+---
+
+- &#10071; We used `<button>` tag in this hands-on, but you can use others which you want.
