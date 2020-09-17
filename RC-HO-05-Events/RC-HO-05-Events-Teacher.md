@@ -97,18 +97,17 @@ nameOfFunction = () => {
   {/* statement */}
 }
 ...
-<button nameOfEvent={() => this.nameOfFunction("value")}>Button</button>
+<button nameOfEvent={() => this.nameOfFunction("argument")}>Button</button>
 ```
 
 > Example :
 
 ```js
 import React from "react";
-import "./App.css";
 
 class App extends React.Component {
-  clarusway = (a) => {
-    alert(a + ": Welcome to the place of the bests!");
+  clarusway = (name) => {
+    alert(name + ": Welcome to the place of the bests!");
   };
   render() {
     return <button onClick={() => this.clarusway("Edward")}>Clarusway!</button>;
@@ -122,8 +121,31 @@ export default App;
 
 ---
 
-- Keep in mind that firs argument has to be `this`
+- Keep in mind that first argument has to be `this`
+
+Syntax :
 
 ```js
-
+<button nameOfEvent={this.nameOfFunction.bind(this, "argument")}>Click</button>
 ```
+
+> Example :
+
+```js
+import React from "react";
+
+class App extends React.Component {
+  clarusway = (name) => {
+    alert(name + ": Welcome to the place of the bests!");
+  };
+  render() {
+    return (
+      <button onClick={this.clarusway.bind(this, "Walter")}>Clarusway!</button>
+    );
+  }
+}
+
+export default App;
+```
+
+- &#10071; If you send arguments without using the `bind` method, `(this.clarusway(this, "Walter")` instead of `this.clarusway.bind(this, "Walter"))`, the shoot function will be executed when the page is loaded instead of waiting for the button to be clicked.
