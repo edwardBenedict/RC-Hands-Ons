@@ -40,8 +40,6 @@
 
 - Main concept of <a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/" target="_blank">React Component lifecycle</a>.
 
-- says
-
 ### Part 2 - `render()` Method
 
 ---
