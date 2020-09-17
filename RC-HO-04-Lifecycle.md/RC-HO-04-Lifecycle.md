@@ -33,6 +33,7 @@
 
 - We will learn most used React Lifecycle Methods:
 
+1. `constructor()` Method
 1. `render()` Method
 1. `componentDidMount()` Method
 1. `componentDidUpdate()` Method
@@ -40,7 +41,48 @@
 
 - Main concept of <a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/" target="_blank">React Component lifecycle</a>.
 
-### Part 2 - `render()` Method
+### Part 2 - `constructor()` Method
+
+---
+
+- `constructor()` method is the phase in which the component is going to start its journey. The `constructor()` in a React component is called before the component is mounted. If you want to implement the constructor for a React component, you need to call `super(props)` method before any other statement.
+
+Syntax :
+
+```js
+Constructor(props){
+     super(props);
+}
+```
+
+> Example:
+
+```js
+import React, { Component } from "react";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      course: "Clarusway",
+    };
+    console.log("Constructor Method run here!");
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h2>React Constructor Example</h2>
+      </div>
+    );
+  }
+}
+export default App;
+```
+
+- &#10071; See the sequence of lifecycle components, please open the browser console.
+
+### Part 3 - `render()` Method
 
 ---
 
@@ -54,4 +96,10 @@ class RenderComponent extends Component {
     return <div>{/* Statement */}</div>;
   }
 }
+```
+
+> Example
+
+```js
+
 ```
