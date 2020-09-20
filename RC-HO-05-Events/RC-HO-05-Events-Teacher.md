@@ -87,6 +87,8 @@ export default class App extends React.Component {
 
 1. Anonymous arrow functions
 
+---
+
 Syntax:
 
 ```js
