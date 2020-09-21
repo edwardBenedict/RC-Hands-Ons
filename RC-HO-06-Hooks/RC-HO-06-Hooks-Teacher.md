@@ -133,3 +133,8 @@ const ThemeContext = React.createContext(null);
 
 export default ThemeContext;
 ```
+
+> Example
+
+<a href="https://codesandbox.io/s/without-usecontext-0f8ek">
+Without useContext</a>
