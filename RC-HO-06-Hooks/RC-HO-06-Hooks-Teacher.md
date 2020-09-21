@@ -18,6 +18,7 @@
 ---
 
 - "Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes. (We don’t recommend rewriting your existing components overnight but you can start using Hooks in the new ones if you’d like.)" saying <a href="https://reactjs.org/docs/hooks-overview.html">React Official Docs</a>.
+- In the past, functional components were nice to use, since they were less verbose, but they were quite limited.
 
 - Using the React Hooks, you should import them from React:
 
@@ -26,6 +27,7 @@ import React, { useState, useEffect, useContext, ... } from "react";
 ```
 
 - React Hooks do not contain any breaking changes. You can keep use `class` components or `function` with hooks.
+-
 
 ### Part 2 - State Hook (`useState`)
 
@@ -116,3 +118,18 @@ export default function DataLoader() {
 - In the array(`[]`) at the end of the `useEffect`, we can write dependecies.When the dependencies are changed, the `useEffect` will run again. Otherwise the array is empty, the effect runs only once.
 
 - We dont have an argument in array, but if we have an argument like `[customerId]`, it will run the certain value(`customerId`) has changed between the component re-renders.
+
+### Part - Context Hook (`useContext`)
+
+---
+
+- With the `useContext`, you dont need to **prop-drilling** anymore. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components (data such as themes, authentication, etc.)
+
+```js
+// src/ThemeContext.js
+import React from "react";
+
+const ThemeContext = React.createContext(null);
+
+export default ThemeContext;
+```
