@@ -136,5 +136,9 @@ export default ThemeContext;
 
 > Example
 
-<a href="https://codesandbox.io/s/without-usecontext-0f8ek">
+1.<a href="https://codesandbox.io/s/without-usecontext-0f8ek">
 Without useContext</a>
+
+2.<a href="https://codesandbox.io/s/usecontextpractice-lo5c6">
+With useContext</a>
+**<p align="center">&#9786; Happy Coding &#9997;</p>**
