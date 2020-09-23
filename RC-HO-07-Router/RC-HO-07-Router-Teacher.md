@@ -37,6 +37,36 @@ cd react-router-app
 npm install react-router-dom
 ```
 
-### Part 3 -
+### Part 3 - Routing
+
+---
+
+- Routing is the process of keeping the browser URL in sync with what’s being rendered on the page. You can go any component with `<Route />` like this way.
+
+Syntax :
+
+```js
+<Route path="/nameofcomponent" component={NameOfComponent} />
+// for example
+<Route path="/contact" component={Contact} />
+```
+
+react-router-app
+├── .gitignore
+├── package.json
+├── public
+│ ├── favicon.ico
+│ ├── index.html
+│ └── manifest.json
+├── README.md
+├── src
+│ ├── App.css
+│ ├── App.js
+│ ├── App.test.js
+│ ├── index.css
+│ ├── index.js
+│ ├── logo.svg
+│ └── registerServiceWorker.js
+└── package.lock.json
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
