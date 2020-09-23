@@ -119,7 +119,7 @@ export default function DataLoader() {
 
 - We dont have an argument in array, but if we have an argument like `[customerId]`, it will run the certain value(`customerId`) has changed between the component re-renders.
 
-### Part - Context Hook (`useContext`)
+### Part 4 - Context Hook (`useContext`)
 
 ---
 
