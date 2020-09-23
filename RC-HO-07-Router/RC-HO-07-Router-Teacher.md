@@ -51,6 +51,7 @@ Syntax :
 <Route path="/contact" component={Contact} />
 ```
 
+```
 react-router-app
 ├── .gitignore
 ├── package.json
@@ -68,5 +69,6 @@ react-router-app
 │ ├── logo.svg
 │ └── registerServiceWorker.js
 └── package.lock.json
+```
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
