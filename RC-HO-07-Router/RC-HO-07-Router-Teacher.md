@@ -74,120 +74,168 @@ import App from "./App";
 ReactDOM.render(<App />, document.getElementById("app"));
 ```
 
-### Part 4 - The Router `<BrowserRouter>`
+```js
+// index.js
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render(<App />, document.getElementById("root"));
+```
+
+### Part 5 - Let's Create Three Component
+
+- Create `Home.js` in the `src/components/` directory.
+
+```js
+// Home.js
+
+import React, { Component } from "react";
+
+export default class Home extends Component {
+  render() {
+    return (
+      <div>
+        <h2>This is Home Page </h2>
+      </div>
+    );
+  }
+}
+```
+
+- Create second components as `AboutUs.js` in the `src/components/` directory.
+
+```js
+// AboutUs.js
+
+import React, { Component } from "react";
+
+export default class AboutUs extends Component {
+  render() {
+    return (
+      <div>
+        <h2>This is About Us Page</h2>
+      </div>
+    );
+  }
+}
+```
+
+- Lastly, create third one as `ContactUs.js` in the `src/components/`
+
+```js
+// ContactUs.js
+
+import React, { Component } from "react";
+
+export default class ContactUs extends Component {
+  render() {
+    return (
+      <div>
+        <h2>This is Contact Us Page.</h2>
+      </div>
+    );
+  }
+}
+```
+
+### Part 5 - The Router `<BrowserRouter>`
 
 A `<Router>` that uses the **HTML5** history API (`pushState`, `replaceState` and the `popstate` event) to keep your UI in sync with the URL. We will use alias for `<BrowserRouter>` as `<Router>`.
 
 ```js
-// index.js
+// App.js
 
+import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import App from "./App";
 
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById("root")
-);
+export default class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <h2>Welcome to React Router Hands-On</h2>
+        </div>
+      </Router>
+    );
+  }
+}
 ```
 
-```
-***********************************************************************
-***********************************************************************
-***********************************************************************
-```
-
-- Routing is the process of keeping the browser URL in sync with what’s being rendered on the page. You can go any component with `<Route />` like this way.
-
-Syntax :
+### Part 6 - Add The Components and Routes In The `App.js` File
 
 ```js
-<Route path="/nameofcomponent" component={NameOfComponent} />
-// for example
-<Route path="/" component={HomePage} />
-<Route path="/contact" component={Contact} />
-```
+// App.js
 
-```js
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
+import "./styles.css";
 
-export default function App() {
-  return (
-    <Router>
-      <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home Page</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <h2>Welcome to React Router Hands-On</h2>
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <ul className="navbar-nav mr-auto">
+              <li>
+                <Link to={"/"} className="nav-link">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to={"/contactus"} className="nav-link">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to={"/aboutus"} className="nav-link">
+                  About Us
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <hr />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/contactus" component={ContactUs} />
+            <Route path="/aboutus" component={AboutUs} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About Us</h2>;
-}
-
-function Contact() {
-  return <h2>Contact</h2>;
-}
+export default App;
 ```
 
-- &#10071; In the contact url `/` matches both `/` and `/contact`. Therefore, both the routes are matched and rendered. How do we avoid that? You should pass the `exact= {true}` props to the router with `path='/'`:
+- &#10071; In the contactus url `/` matches both `/` and `/contactus`. Therefore, both the routes are matched and rendered. How do we avoid that? You should pass the `exact= {true}` props to the router with `path='/'`:
 
 ```js
 <Route exact={true} path="/" component={HomePage} />
 ```
 
-- In React sense, you should use React Components for all page in another `js` file.
-
-- <a href="https://codesandbox.io/s/react-router-app-01-otqhb?file=/src/App.js">React Router Example</a>
+- <a href="https://codesandbox.io/s/react-router-app-88izz?file=/src/App.js">React Router Example</a>
 
 ```
 react-router-app
-├── .gitignore
-├── package.json
 ├── public
-│ ├── favicon.ico
-│ ├── index.html
-│ └── manifest.json
-├── README.md
+│     └── index.html
 ├── src
-│ ├── App.css
-│ ├── App.js
-│ ├── App.test.js
-│ ├── index.css
-│ ├── index.js
-│ ├── logo.svg
-│ └── registerServiceWorker.js
-└── package.lock.json
+│    ├── components
+│    │       ├── Home.js
+│    │       ├── ContactUs.js
+│    │       └── AboutUs.js
+│    ├── App.js
+│    ├── index.js
+│    └── styles.css
+└── package.json
 ```
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
