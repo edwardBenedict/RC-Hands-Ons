@@ -11,7 +11,7 @@
 
 - Part 2 - Install React Router
 
-- Part 3 - Passing Arguments to Event
+- Part 3 - Routing
 
 ### Part 1 - What is React Router?
 
@@ -28,13 +28,16 @@
 
 ```js
 npx create-react-app react-router-app
-cd react-router-app
+// or
+yarn create react-app react-router-app
 ```
 
 - And we can install React Router with `npm` or `yarn`. Since we are building a web app, we will use `react-router-dom` in this hands-on.
 
-```
+```js
 npm install react-router-dom
+// or
+yarn add react-router-dom
 ```
 
 ### Part 3 - Routing
