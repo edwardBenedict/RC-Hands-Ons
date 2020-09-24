@@ -40,9 +40,63 @@ npm install react-router-dom
 yarn add react-router-dom
 ```
 
-### Part 3 - Routing
+### Part 3 - Create an `App.js` Component
 
 ---
+
+In `src` directory, create `App.js` component file.
+
+```js
+// App.js
+
+import React, { Component } from "react";
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <h2>Welcome to React Router Hands-On</h2>
+      </div>
+    );
+  }
+}
+```
+
+And, in the index.js;
+
+```js
+// index.js
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render(<App />, document.getElementById("app"));
+```
+
+### Part 4 - The Router `<BrowserRouter>`
+
+A `<Router>` that uses the **HTML5** history API (`pushState`, `replaceState` and the `popstate` event) to keep your UI in sync with the URL. We will use alias for `<BrowserRouter>` as `<Router>`.
+
+```js
+// index.js
+
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
+
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("root")
+);
+```
+
+```
+***********************************************************************
+***********************************************************************
+***********************************************************************
+```
 
 - Routing is the process of keeping the browser URL in sync with what’s being rendered on the page. You can go any component with `<Route />` like this way.
 
