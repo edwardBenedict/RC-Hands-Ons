@@ -23,7 +23,7 @@
 
 ---
 
-- React Router is the standard routing library for React.From the <a href="https://reactrouter.com/">React Router docs</a>:
+- React Router is the standard routing library for React. From the <a href="https://reactrouter.com/">React Router docs</a>:
   > Components are the heart of React's powerful, declarative programming model. React Router is a collection of navigational components that compose declaratively with your application.
 
 ### Part 2 - Install React Router
@@ -80,16 +80,6 @@ import App from "./App";
 ReactDOM.render(<App />, document.getElementById("app"));
 ```
 
-```js
-// index.js
-
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-
-ReactDOM.render(<App />, document.getElementById("root"));
-```
-
 ### Part 4 - Let's Create Three Component
 
 ---
@@ -130,7 +120,7 @@ export default class AboutUs extends Component {
 }
 ```
 
-- Lastly, create third one as `ContactUs.js` in the `src/components/`
+- Lastly, create third one as `ContactUs.js` in the `src/components/` directory.
 
 ```js
 // ContactUs.js
@@ -149,6 +139,8 @@ export default class ContactUs extends Component {
 ```
 
 ### Part 5 - The Router `<BrowserRouter>`
+
+---
 
 A `<Router>` that uses the **HTML5** history API (`pushState`, `replaceState` and the `popstate` event) to keep your UI in sync with the URL. We will use alias for `<BrowserRouter>` as `<Router>`.
 
@@ -172,6 +164,8 @@ export default class App extends Component {
 ```
 
 ### Part 6 - Add The Components and Routes In The `App.js` File
+
+---
 
 ```js
 // App.js
