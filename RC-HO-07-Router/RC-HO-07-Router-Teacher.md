@@ -11,7 +11,13 @@
 
 - Part 2 - Install React Router
 
-- Part 3 - Routing
+- Part 3 - Create an `App.js` Component
+
+- Part 4 - Let's Create Three Component
+
+- Part 5 - The Router `<BrowserRouter>`
+
+- Part 6 - Add The Components and Routes In The `App.js` File
 
 ### Part 1 - What is React Router?
 
@@ -84,7 +90,9 @@ import App from "./App";
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
-### Part 5 - Let's Create Three Component
+### Part 4 - Let's Create Three Component
+
+---
 
 - Create `Home.js` in the `src/components/` directory.
 
