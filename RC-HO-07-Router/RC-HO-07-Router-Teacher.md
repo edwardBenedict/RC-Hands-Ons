@@ -223,7 +223,7 @@ export default App;
 <Route exact={true} path="/" component={HomePage} />
 ```
 
-- <a href="https://codesandbox.io/s/react-router-app-88izz?file=/src/App.js">React Router Example</a>
+- Click here to see <a href="https://codesandbox.io/s/react-router-app-88izz?file=/src/App.js">React Router Example</a>
 
 ```
 react-router-app
