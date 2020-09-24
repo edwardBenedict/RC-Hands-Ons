@@ -44,8 +44,63 @@ import { useState, useContext, useEffect, useReducer } from "react";
 
 - You can import anyone you need.
 
-### Part 3 - `setState` Hooks
+### Part 3 - `useState` Hooks
 
 ---
+
+- Before `useState` Hook, you can mutate internal state with `this.setState`.
+
+```js
+import React, { Component } from "react";
+
+export default class Button extends Component {
+  constructor() {
+    super();
+    this.state = { text: "Click Button" };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(() => {
+      return { text: "Been clicked!" };
+    });
+  }
+
+  render() {
+    const { text } = this.state;
+    return <button onClick={this.handleClick}>{text}</button>;
+  }
+}
+```
+
+- With React Hooks, you can do this operation without an ES6 class.
+
+- Firstly, you should import `useState`:
+
+```js
+import React, { useState } from "react";
+```
+
+- After that;
+
+```js
+const [text, setText] = useState("Click Button");
+```
+
+- The names(`text`,`setText`) above can be anything you want, it doesn't matter for React. Commonly used like this way `name`, `setName`.
+
+- In this example, `"Click Button"` is initial state.
+
+```js
+import React, { useState } from "react";
+
+export default function Button() {
+  const [text, setText] = useState("Click Button");
+
+  return <button onClick={() => setText("Been clicked!")}>{text}</button>;
+}
+```
+
+- You can mutate `text` using `setText`.
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
