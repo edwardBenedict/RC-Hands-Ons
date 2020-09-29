@@ -71,6 +71,6 @@ Syntax :
 <ExampleContext.Consumer>{value}</ExampleContext.Consumer>
 ```
 
-- Click for <a href="https://codesandbox.io/s/react-context-app-t9wf5?file=/src/App.js" target="_blank">**Context** Example</a>.
+- Click for [Context Example](https://codesandbox.io/s/react-context-app-t9wf5?file=/src/App.js){:target="\_blank" rel="noopener"}.
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
