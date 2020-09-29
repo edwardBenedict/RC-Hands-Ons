@@ -9,15 +9,11 @@
 
 - Part 1 - What is React Context?
 
-- Part 2 - Install React Router
+- Part 2 - `createContext`
 
-- Part 3 - Create an `App.js` Component
+- Part 3 - `Context.Provider`
 
-- Part 4 - Let's Create Three Component
-
-- Part 5 - The Router `<BrowserRouter>`
-
-- Part 6 - Add The Components and Routes In The `App.js` File
+- Part 4 - `Context.Consumer`
 
 ### Part 1 - What is React Context?
 
