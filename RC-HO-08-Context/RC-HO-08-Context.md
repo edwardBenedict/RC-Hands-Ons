@@ -41,14 +41,36 @@ import React, { useContext } from "react";
 
 ```js
 import React, { createContext } from "react";
-const ExampleContent = createContext(defaultValue);
+const ExampleContext = createContext(defaultValue);
 // or
 import React from "react";
-const ExampleContent2 = React.createContext(defaultValue);
+const ExampleContext2 = React.createContext(defaultValue);
 ```
 
 ### Part 3 - `Context.Provider`
 
 ---
+
+- After `createContext`, `Context.Provider` allows us to pass props to consuming components.
+
+Syntax:
+
+```js
+<ExampleContext.Provider value={/* value or values(in array) */}
+```
+
+### Part 4 - `Context.Consumer`
+
+---
+
+- `Context.Consumer` allows us to use the value at any component, whichever component subscribes to it.
+
+Syntax :
+
+```js
+<ExampleContext.Consumer>{value}</ExampleContext.Consumer>
+```
+
+- Click for <a href="https://codesandbox.io/s/react-context-app-t9wf5?file=/src/App.js">**Context** Example</a>.
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
