@@ -187,3 +187,5 @@ class NameOfOuterComponent extends React.Component {
 ```js
 import NameOfInnerComponent from "./NameOfInnerComponent";
 ```
+
+**<p align="center">&#9786; Happy Coding &#9997;</p>**

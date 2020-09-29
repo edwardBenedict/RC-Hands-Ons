@@ -152,3 +152,5 @@ export default App;
 ---
 
 - &#9889; We used `<button>` tag in this hands-on, but you can use others which you want.
+
+**<p align="center">&#9786; Happy Coding &#9997;</p>**

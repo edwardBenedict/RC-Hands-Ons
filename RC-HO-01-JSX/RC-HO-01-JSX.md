@@ -142,3 +142,5 @@ Syntax:
   {/* This is a comment in JSX */}
 </div>
 ```
+
+**<p align="center">&#9786; Happy Coding &#9997;</p>**

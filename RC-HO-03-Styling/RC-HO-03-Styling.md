@@ -273,3 +273,5 @@ class App extends React.Component {
 
 export default App;
 ```
+
+**<p align="center">&#9786; Happy Coding &#9997;</p>**

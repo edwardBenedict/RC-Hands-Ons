@@ -141,4 +141,5 @@ Without <code>useContext</code></a>
 
 2.<a href="https://codesandbox.io/s/usecontextpractice-lo5c6">
 With <code>useContext</code></a>
+
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
