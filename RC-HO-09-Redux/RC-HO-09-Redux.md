@@ -26,13 +26,13 @@
 
 ---
 
-- Redux is an open-source JavaScript library for managing application state. We can use Redux with React, Angualar. Redux allows us React components read data from a Redux store, and dispatch actions to the store to update data.
+- Redux is an open-source JavaScript library for managing application state. We can use Redux with React, Angualar. Redux allows us React components read data from a Redux store, and dispatch actions to the store to update data. With Redux, we can pass data without prop-drilling.
 
 ### Part 2 - Install Redux
 
 ---
 
-To use React Redux with our React app, we should:
+- To use React Redux with our React app, we should:
 
 ```js
 // NPM
@@ -41,3 +41,55 @@ npm install react-redux redux
 // Yarn
 yarn add react-redux redux
 ```
+
+### Part 3 - `createStore`
+
+---
+
+- We can create `store` with `createStore` after `import { createStore } from "redux"`.
+- Also we can pass initial state to `createStore`.
+
+```js
+// src/redux/store.js
+import { createStore } from "redux";
+import rootReducer from "../reducers.js";
+
+const store = createStore(rootReducer);
+
+export default store;
+```
+
+### Part 4 - Redux `reducer`
+
+---
+
+- `reducer` is just a function. First parameter of `reducer` is current state and second parameter is `action`. And `reducer` is most important part of Redux.
+
+```js
+// src/redux/reducers.js
+const initialState = {
+  movies: [],
+};
+
+function rootReducer(state = initialState, action) {
+  return state;
+}
+
+export default rootReducer;
+```
+
+### Part 5 - `action`
+
+---
+
+- we define actions type in javascript object. It's look like,
+
+```js
+// src/redux/actions.js
+{
+  type: 'ADD_MOVIE',
+  payload: { title: 'Inception', id: 1 }
+}
+```
+
+- In javascript object there are two properties: `type` and `payload`.
